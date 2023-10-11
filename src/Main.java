@@ -5,18 +5,23 @@ public class Main {
         double result = 0.0d;
         char equation = 'd';
 
-        if(equation == 'a')
-            result = value_1 + value_2;
-        else if (equation == 'm')
-            result = value_1 * value_2;
-        else if (equation == 's')
-            result = value_1 - value_2;
-        else if (equation == 'd')
-            if (value_2 != 0)
-                result = value_1 / value_2;
-        else {
-            System.out.println("Something went wrong.");
-            result = 0.0d;
+        switch (equation) {
+            case 'a':
+                result = value_1 + value_2;
+                break;
+            case 'm':
+                result = value_1 * value_2;
+                break;
+            case 's':
+                result = value_1 - value_2;
+                break;
+            case 'd':
+                result = value_2 != 0 ? value_1 / value_2 : 0.0d;
+                break;
+            default:
+                System.out.println("Something went wrong.");
+                result = 0.0d;
+                break;
         }
         System.out.println(result);
     }
