@@ -7,27 +7,32 @@ public class Main {
         char equation = 'd';
 
         for (int i = 1; i < codes.length; i++) {
-            switch (codes[i]) {
-                case 'a':
-                    results[i] = leftValues[i] + rightValues[i];
-                    break;
-                case 'm':
-                    results[i] = leftValues[i] * rightValues[i];
-                    break;
-                case 's':
-                    results[i] = leftValues[i] - rightValues[i];
-                    break;
-                case 'd':
-                    results[i] = rightValues[i] != 0 ? leftValues[i] / rightValues[i] : 0.0d;
-                    break;
-                default:
-                    System.out.println("Something went wrong.");
-                    results[i] = 0.0d;
-                    break;
-            }
+            results[i] = execute(codes[i], leftValues[i], rightValues[i]);
         }
 
         for(double currentResult : results)
             System.out.println(currentResult);
+    }
+    static double execute(char code, double leftValue, double rightValue) {
+        double result;
+        switch (code) {
+            case 'a':
+                result = leftValue + rightValue;
+                break;
+            case 'm':
+                result = leftValue * rightValue;
+                break;
+            case 's':
+                result = leftValue - rightValue;
+                break;
+            case 'd':
+                result = rightValue != 0 ? leftValue / rightValue : 0.0d;
+                break;
+            default:
+                System.out.println("Something went wrong.");
+                result = 0.0d;
+                break;
+        }
+        return result;
     }
 }
