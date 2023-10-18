@@ -6,13 +6,28 @@ public class Main {
         double[] results = new double[codes.length];
         char equation = 'd';
 
-        for (int i = 1; i < codes.length; i++) {
-            results[i] = execute(codes[i], leftValues[i], rightValues[i]);
+        if (args.length == 0) {
+            for (int i = 1; i < codes.length; i++) {
+                results[i] = execute(codes[i], leftValues[i], rightValues[i]);
+            }
+            for (double currentResult : results)
+                System.out.println(currentResult);
+        } else if (args.length == 3) {
+            handleCommandLine(args);
         }
-
-        for(double currentResult : results)
-            System.out.println(currentResult);
+        else
+            System.out.println("Provide operation code and 2 numeric values.");
     }
+
+    private static void handleCommandLine(String[] args) {
+
+        char code = args[0].charAt(0);
+        double leftValue = Double.parseDouble(args[1]);
+        double rightValue = Double.parseDouble(args[2]);
+        double result = execute(code, leftValue, rightValue);
+        System.out.println(result);
+    }
+
     static double execute(char code, double leftValue, double rightValue) {
         double result;
         switch (code) {
