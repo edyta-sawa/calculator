@@ -33,6 +33,7 @@
     <configuration name="config-1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="calculator" />
+      <option name="PROGRAM_PARAMETERS" value="interactive" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -75,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697631478349</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="command line args">
+      <created>1697634037077</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697634037077</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -83,6 +91,7 @@
     <MESSAGE value="switch" />
     <MESSAGE value="for loop" />
     <MESSAGE value="methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="methods" />
+    <MESSAGE value="command line args" />
+    <option name="LAST_COMMIT_MESSAGE" value="command line args" />
   </component>
 </project>
